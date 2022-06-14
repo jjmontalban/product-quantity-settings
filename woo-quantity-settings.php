@@ -2,11 +2,15 @@
 /**
  * Plugin Name: Woocommerce Quantity Settings Field
  * Plugin URI:  https://jjmontalban.github.io
- * Description: It allows you to configure the purchase quantities of the products as well as their unit intervals.
+ * Description: Create a new option in product creation. You can to set a minimum, a maximum one or a quantity range for products.
  * Author:      JJMontalban
  * Author URI:  https://jjmontalban.github.io
  * Text Domain: woo-quantity-settings
+ * Domain Path: /lang
  * Version:     1.0.0
+ * 
+ * License: GNU General Public License v3.0
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
 
 //Translations
@@ -19,19 +23,55 @@ function wqs_plugin_load_textdomain()
 }
 add_action('plugins_loaded', 'wqs_plugin_load_textdomain');
 
-//check if woocommerce active
-function wqs_woo_activate() 
-{
-    $plugin = plugin_basename( __FILE__ );
-    
-    if ( !class_exists( 'Woocommerce' ) ) 
-    { 
-        // Message error + allow back link.
-        deactivate_plugins( $plugin );
-        wp_die( _e( "This plugin requires Woocommerce to be installed and activated.", "woo-quantity-settings" ), _e( "Error", "woo-quantity-settings" ), array( 'back_link' => true ) );        
+             
+
+//https://fluentthemes.com/
+class FT_AdminNotice {
+	
+	/**
+     * Register the activation hook
+     */
+	public function __construct() {
+		register_activation_hook( __FILE__, array( $this, 'ft_install' ) );
+	}
+	
+    /**
+     * Deactivate the plugin and display a notice if the dependent plugin is not active.
+     */
+    public function ft_install() {
+        if ( ! class_exists( 'WooCommerce' ) ) 
+        {
+            $this->ft_deactivate_plugin();
+            wp_die( sprintf(__( 'This plugin requires Woocommerce to be installed and activated. You can download WooCommerce latest version %1$s or go back to %2$s', 'woo-quantity-settings' ), 
+                '<strong><a href="https://downloads.wordpress.org/plugin/woocommerce.latest-stable.zip">Woocommerce</a></strong>', 
+                '<strong><a href="' . esc_url( admin_url( 'plugins.php' ) ) . '">plugins</a></strong>' 
+                ) );
+        }
     }
+
+    /**
+     * Function to deactivate the plugin
+     */
+    protected function ft_deactivate_plugin() {
+        require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+        deactivate_plugins( plugin_basename( __FILE__ ) );
+        if ( isset( $_GET['activate'] ) ) {
+            unset( $_GET['activate'] );
+        }
+    }
+
 }
-register_activation_hook( __FILE__, 'wqs_woo_activate' ); // Register myplugin_activate on
+
+new FT_AdminNotice();
+
+
+
+
+
+
+
+
+
 
 
 

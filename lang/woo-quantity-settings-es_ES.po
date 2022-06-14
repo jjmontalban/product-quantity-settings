@@ -1,12 +1,12 @@
 # Copyright (C) 2022 JJMontalban
-# This file is distributed under the same license as the Woocommerce Quantity Settings Field plugin.
+# This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
 "Project-Id-Version: Woocommerce Quantity Settings Field 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-quantity-"
 "settings\n"
-"POT-Creation-Date: 2022-06-13T19:04:47+02:00\n"
-"PO-Revision-Date: 2022-06-13 19:19+0200\n"
+"POT-Creation-Date: 2022-06-14T12:25:54+02:00\n"
+"PO-Revision-Date: 2022-06-14 12:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -19,63 +19,68 @@ msgstr ""
 
 #. Plugin Name of the plugin
 msgid "Woocommerce Quantity Settings Field"
-msgstr "Wocommerce Configuración de Cantidades"
+msgstr "Configuración de cantidades para Woocommerce"
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
 msgid "https://jjmontalban.github.io"
-msgstr "https://jjmontalban.github.io"
+msgstr ""
 
 #. Description of the plugin
 msgid ""
-"It allows you to configure the purchase quantities of the products as well "
-"as their unit intervals."
+"Create a new option in product creation. You can to set a minimum, a maximum "
+"one or a quantity range for products."
 msgstr ""
-"Permite configurar el nº de unidades de cada producto así como los rangos "
-"de cantidades permitidos para su compra."
+"Crea una nueva opción en la creación de un producto. Establece una cantidad "
+"mínima, o un rango de cantidades a la venta."
 
 #. Author of the plugin
 msgid "JJMontalban"
-msgstr "JJMontalban"
+msgstr ""
 
-#: woo-quantity-settings.php:31
-msgid "This plugin requires Woocommerce to be installed and activated."
-msgstr "Este plugin requiere una instalación activa de Woocommerce."
+#: woo-quantity-settings.php:45
+msgid ""
+"This plugin requires Woocommerce to be installed and activated. You can "
+"download WooCommerce latest version %1$s or go back to %2$s"
+msgstr ""
+"Este plugin requiere una instalación activa de Woocommerce. Puedes descargar "
+"la última versión %1$s o volver al listado de %2$s"
 
-#: woo-quantity-settings.php:31
-msgid "Error"
-msgstr "Error"
+#: woo-quantity-settings.php:46
+msgid "here"
+msgstr "aquí"
 
-#: woo-quantity-settings.php:53
+#: woo-quantity-settings.php:93
 msgid "Quantity settings"
 msgstr "Configuración de cantidades"
 
-#: woo-quantity-settings.php:55
+#: woo-quantity-settings.php:95
 msgid "Activate the configuration of the quantities field."
-msgstr "Activa el campo de configuración de cantidades."
+msgstr "Activa la configuración de cantidades"
 
-#: woo-quantity-settings.php:63
+#: woo-quantity-settings.php:103
 msgid "Minimum amount"
 msgstr "Cantidad mínima"
 
-#: woo-quantity-settings.php:66
+#: woo-quantity-settings.php:106
 msgid "Minimum amount allowed (>0)"
-msgstr "Mínima cantidad permitida"
+msgstr "Cantidad mínima permitida (>0)"
 
-#: woo-quantity-settings.php:74
+#: woo-quantity-settings.php:114
 msgid "Maximum Quantity"
-msgstr "Máxima cantidad"
+msgstr "Cantidad máxima"
 
-#: woo-quantity-settings.php:77
+#: woo-quantity-settings.php:117
 msgid ""
 "Set the maximum allowed quantity limit (a number greater than 0). Value "
 "\"-1\" is unlimited"
-msgstr "Límite permitido. El valor -1 es ilimitado"
+msgstr ""
+"Cantidad máxima permitida (n1 mayor que 0). El valor \"-1\" es ilimitado"
 
-#: woo-quantity-settings.php:85
+#: woo-quantity-settings.php:125
 msgid "Quantity Range"
 msgstr "Rango de cantidad"
 
-#: woo-quantity-settings.php:88
+#: woo-quantity-settings.php:128
 msgid "Show range amount allowed"
-msgstr "Muestra el rango de cantidad permitida"
+msgstr "Muestra el rango de cantidad permitido"
