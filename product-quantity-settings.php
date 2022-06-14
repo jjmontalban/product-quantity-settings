@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Woocommerce Quantity Settings Field
+ * Plugin Name: Product Quantity Settings
  * Plugin URI:  https://jjmontalban.github.io
  * Description: Create a new option in product creation. You can to set a minimum, a maximum one or a quantity range for products.
  * Author:      JJMontalban
  * Author URI:  https://jjmontalban.github.io
- * Text Domain: woo-quantity-settings
+ * Text Domain: product-quantity-settings
  * Domain Path: /lang
  * Version:     1.0.0
  * 
@@ -16,7 +16,7 @@
 //Translations
 function wqs_plugin_load_textdomain()
 {
-    $text_domain	= 'woo-quantity-settings';
+    $text_domain	= 'product-quantity-settings';
     $path_languages = basename( dirname(__FILE__) ) . '/lang/';
     
     load_plugin_textdomain( $text_domain, false, $path_languages );
@@ -42,7 +42,7 @@ class FT_AdminNotice {
         if ( ! class_exists( 'WooCommerce' ) ) 
         {
             $this->ft_deactivate_plugin();
-            wp_die( sprintf(__( 'This plugin requires Woocommerce to be installed and activated. You can download WooCommerce latest version %1$s or go back to %2$s', 'woo-quantity-settings' ), 
+            wp_die( sprintf(__( 'This plugin requires Woocommerce to be installed and activated. You can download WooCommerce latest version %1$s or go back to %2$s', 'product-quantity-settings' ), 
                 '<strong><a href="https://downloads.wordpress.org/plugin/woocommerce.latest-stable.zip">Woocommerce</a></strong>', 
                 '<strong><a href="' . esc_url( admin_url( 'plugins.php' ) ) . '">plugins</a></strong>' 
                 ) );
@@ -90,9 +90,9 @@ function wc_qty_add_product_field()
 
     woocommerce_wp_checkbox( array( // Checkbox.
         'id'            => 'qty_args',
-        'label'         => __( 'Quantity settings', 'woo-quantity-settings' ),
+        'label'         => __( 'Quantity settings', 'product-quantity-settings' ),
         'value'         => empty( $values ) ? 'no' : 'yes',
-        'description'   => __( 'Activate the configuration of the quantities field.', 'woo-quantity-settings' ),
+        'description'   => __( 'Activate the configuration of the quantities field.', 'product-quantity-settings' ),
     ) );
 
     echo '<div class="qty-args hidden">';
@@ -100,10 +100,10 @@ function wc_qty_add_product_field()
     woocommerce_wp_text_input( array(
             'id'                => 'qty_min',
             'type'              => 'number',
-            'label'             => __( 'Minimum amount', 'woo-quantity-settings' ),
+            'label'             => __( 'Minimum amount', 'product-quantity-settings' ),
             'placeholder'       => '',
             'desc_tip'          => 'true',
-            'description'       => __( 'Minimum amount allowed (>0)', 'woo-quantity-settings' ),
+            'description'       => __( 'Minimum amount allowed (>0)', 'product-quantity-settings' ),
             'custom_attributes' => array( 'step'  => 'any', 'min'   => '0'),
             'value'             => isset( $values['qty_min']) && $values['qty_min'] > 0 ? ( int ) $values['qty_min'] : 0,
     ) );
@@ -111,10 +111,10 @@ function wc_qty_add_product_field()
     woocommerce_wp_text_input( array(
             'id'                => 'qty_max',
             'type'              => 'number',
-            'label'             => __( 'Maximum Quantity', 'woo-quantity-settings' ),
+            'label'             => __( 'Maximum Quantity', 'product-quantity-settings' ),
             'placeholder'       => '',
             'desc_tip'          => 'true',
-            'description'       => __( 'Set the maximum allowed quantity limit (a number greater than 0). Value "-1" is unlimited', 'woo-quantity-settings' ),
+            'description'       => __( 'Set the maximum allowed quantity limit (a number greater than 0). Value "-1" is unlimited', 'product-quantity-settings' ),
             'custom_attributes' => array( 'step'  => 'any', 'min'   => '-1'),
             'value'             => isset($values['qty_max']) && $values['qty_max'] > 0 ? (int) $values['qty_max'] : -1,
     ) );
@@ -122,10 +122,10 @@ function wc_qty_add_product_field()
     woocommerce_wp_text_input( array(
             'id'                => 'qty_step',
             'type'              => 'number',
-            'label'             => __( 'Quantity Range', 'woo-quantity-settings' ),
+            'label'             => __( 'Quantity Range', 'product-quantity-settings' ),
             'placeholder'       => '',
             'desc_tip'          => 'true',
-            'description'       => __( 'Show range amount allowed', 'woo-quantity-settings' ),
+            'description'       => __( 'Show range amount allowed', 'product-quantity-settings' ),
             'custom_attributes' => array( 'step'  => 'any', 'min'   => '1'),
             'value'             => isset($values['qty_step']) && $values['qty_step'] > 1 ? ( int ) $values['qty_step'] : 1,
     ) );

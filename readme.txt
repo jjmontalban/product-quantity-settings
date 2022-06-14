@@ -1,4 +1,4 @@
-=== Quantity Settings for WooCommerce ===
+=== Product Quantity Settings  ===
 Contributors: JJMontalban
 Tags: woocommerce, woo commerce, product, quantity, min, max, range, unit, fixed quantity, allowed quantity, minimum quantity, maximum quantity, range quantity, fixed quantity
 Requires at least: 4.4

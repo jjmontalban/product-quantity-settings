@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-quantity-"
 "settings\n"
 "POT-Creation-Date: 2022-06-14T12:25:54+02:00\n"
-"PO-Revision-Date: 2022-06-14 12:31+0200\n"
+"PO-Revision-Date: 2022-06-14 13:15+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -18,8 +18,8 @@ msgstr ""
 "X-Domain: woo-quantity-settings\n"
 
 #. Plugin Name of the plugin
-msgid "Woocommerce Quantity Settings Field"
-msgstr "Configuración de cantidades para Woocommerce"
+msgid "Product Quantity Settings"
+msgstr "Configuración de cantidades de Producto"
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
@@ -56,7 +56,7 @@ msgstr "Configuración de cantidades"
 
 #: woo-quantity-settings.php:95
 msgid "Activate the configuration of the quantities field."
-msgstr "Activa la configuración de cantidades"
+msgstr "Activa la configuración de cantidades."
 
 #: woo-quantity-settings.php:103
 msgid "Minimum amount"

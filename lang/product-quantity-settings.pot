@@ -15,7 +15,7 @@ msgstr ""
 "X-Domain: woo-quantity-settings\n"
 
 #. Plugin Name of the plugin
-msgid "Woocommerce Quantity Settings Field"
+msgid "Product Quantity Settings"
 msgstr ""
 
 #. Plugin URI of the plugin
