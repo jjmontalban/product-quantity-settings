@@ -3,7 +3,7 @@ Contributors: JJMontalban
 Tags: woocommerce, woo commerce, product, quantity, min, max, range, unit, fixed quantity, allowed quantity, minimum quantity, maximum quantity, range quantity, fixed quantity
 Requires at least: 4.4
 Tested up to: 6.0
-Stable tag: 4.3
+Stable tag: 1.0.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 

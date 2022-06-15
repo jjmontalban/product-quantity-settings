@@ -2,25 +2,24 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Woocommerce Quantity Settings Field 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woo-quantity-settings\n"
+"Project-Id-Version: Product Quantity Settings 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/product-quantity-settings\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-06-14T12:25:54+02:00\n"
+"POT-Creation-Date: 2022-06-15T10:59:49+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
-"X-Domain: woo-quantity-settings\n"
+"X-Domain: pqs\n"
 
 #. Plugin Name of the plugin
 msgid "Product Quantity Settings"
 msgstr ""
 
 #. Plugin URI of the plugin
-#. Author URI of the plugin
-msgid "https://jjmontalban.github.io"
+msgid "https://github.com/jjmontalban/woo-quantity-settings"
 msgstr ""
 
 #. Description of the plugin
@@ -31,42 +30,42 @@ msgstr ""
 msgid "JJMontalban"
 msgstr ""
 
-#: woo-quantity-settings.php:45
+#. Author URI of the plugin
+msgid "https://jjmontalban.github.io"
+msgstr ""
+
+#: product-quantity-settings.php:43
 msgid "This plugin requires Woocommerce to be installed and activated. You can download WooCommerce latest version %1$s or go back to %2$s"
 msgstr ""
 
-#: woo-quantity-settings.php:46
-msgid "here"
-msgstr ""
-
-#: woo-quantity-settings.php:93
+#: product-quantity-settings.php:80
 msgid "Quantity settings"
 msgstr ""
 
-#: woo-quantity-settings.php:95
+#: product-quantity-settings.php:82
 msgid "Activate the configuration of the quantities field."
 msgstr ""
 
-#: woo-quantity-settings.php:103
+#: product-quantity-settings.php:90
 msgid "Minimum amount"
 msgstr ""
 
-#: woo-quantity-settings.php:106
+#: product-quantity-settings.php:93
 msgid "Minimum amount allowed (>0)"
 msgstr ""
 
-#: woo-quantity-settings.php:114
+#: product-quantity-settings.php:101
 msgid "Maximum Quantity"
 msgstr ""
 
-#: woo-quantity-settings.php:117
-msgid "Set the maximum allowed quantity limit (a number greater than 0). Value \"-1\" is unlimited"
+#: product-quantity-settings.php:104
+msgid "Set the maximum allowed quantity limit (a number greater than 0). Value -1 is unlimited"
 msgstr ""
 
-#: woo-quantity-settings.php:125
+#: product-quantity-settings.php:112
 msgid "Quantity Range"
 msgstr ""
 
-#: woo-quantity-settings.php:128
+#: product-quantity-settings.php:115
 msgid "Show range amount allowed"
 msgstr ""
